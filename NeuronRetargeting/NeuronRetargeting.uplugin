@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.00",
+	"FriendlyName": "NeuronRetargeting",
+	"Description": "Retargeting Module for Noitom Motion Captures",
+	"Category": "Animation",
+	"CreatedBy": "NOITOM",
+	"CreatedByURL": "www.neuronmocap.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "www.neuronmocap.com/content/support",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "NeuronRetargeting",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "NeuronRetargetingEditor",
+			"Type": "UncookedOnly",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		}
+	]
+}
