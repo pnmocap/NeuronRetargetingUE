@@ -6,6 +6,7 @@ Usage:
 ![image](https://user-images.githubusercontent.com/2877762/189868960-03788d9d-b07d-495a-9ed7-f644e161a4f5.png)
 
 2. make sure dispalacement is turned on
+![image](https://user-images.githubusercontent.com/2877762/190944771-4ad8e89d-451e-4069-a3f1-3b7775df38ff.png)
 
 3. setup the FSC node's properties.
 
