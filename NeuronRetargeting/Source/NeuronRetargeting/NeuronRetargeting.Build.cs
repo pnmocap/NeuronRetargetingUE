@@ -64,6 +64,9 @@ public class NeuronRetargeting : ModuleRules
         PublicDelayLoadDLLs.Add("MotionAdaptorLib.dll");
 
         // Runtime Dependencies for Project Package
-        RuntimeDependencies.Add(Path.Combine(lib_folder_path, "MotionAdaptorLib.dll"));
+        string dll_folder_path = Path.Combine(ModuleDirectory, "../ThirdParty/MotionAdaptorLib", "bin");
+        RuntimeDependencies.Add(Path.Combine(dll_folder_path, "MotionAdaptorLib.dll"));
+        RuntimeDependencies.Add(Path.Combine(dll_folder_path, "GoCreateEngine.dll"));
+        RuntimeDependencies.Add(Path.Combine(dll_folder_path, "SDL2.dll"));
     }
 }
