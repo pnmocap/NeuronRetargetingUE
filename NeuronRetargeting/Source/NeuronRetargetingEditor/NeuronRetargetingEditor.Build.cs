@@ -18,9 +18,13 @@ namespace UnrealBuildTool.Rules
 #endif
         {
             PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-            if (!Directory.Exists(Path.Combine(ModuleDirectory, @"Private")))
+            if (!System.IO.File.Exists(System.IO.Path.Combine(ModuleDirectory, @"Private", @"NeuronRetargetingEditorModule.cpp")))
             {
                 bUsePrecompiled = true;
+            }
+            else
+            {
+                bPrecompile = true;
             }
 
             PrivateDependencyModuleNames.AddRange(

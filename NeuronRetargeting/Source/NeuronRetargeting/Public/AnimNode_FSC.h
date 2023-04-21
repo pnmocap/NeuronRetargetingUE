@@ -48,15 +48,17 @@ private:
 protected:
 	friend class UAnimGraphNode_FSC;
 
-    UPROPERTY(EditAnywhere, Category = Neuron)
+public:
+    UPROPERTY(EditAnywhere, Category = Neuron, meta = (PinShownByDefault))
     float DataSourceHipsWidth = 22.0f;
 
-    UPROPERTY(EditAnywhere, Category = Neuron)
+    UPROPERTY(EditAnywhere, Category = Neuron, meta = (PinShownByDefault))
     float DataSourceLegLength = 87.1f;
 
-    UPROPERTY(EditAnywhere, Category = Neuron)
+    UPROPERTY(EditAnywhere, Category = Neuron, meta = (PinShownByDefault))
 	float DataSourceAnkleHeight = 10.0f;
 
+protected:
 	UPROPERTY(EditAnywhere, Category = Neuron)
 	FBoneReference HipsBone;
 

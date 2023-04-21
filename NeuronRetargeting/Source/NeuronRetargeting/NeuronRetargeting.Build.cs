@@ -9,6 +9,15 @@ public class NeuronRetargeting : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
+		if (!System.IO.File.Exists(System.IO.Path.Combine(ModuleDirectory, @"Private", @"NeuronRetargeting.cpp")))
+		{
+			bUsePrecompiled = true;
+		}
+		else
+		{
+			bPrecompile = true;
+		}
+
 		PublicIncludePaths.AddRange(
 			new string[] {
 				// ... add public include paths required here ...
@@ -57,14 +66,13 @@ public class NeuronRetargeting : ModuleRules
 			);
 
         // Add the import library
-        string lib_folder_path = Path.Combine(ModuleDirectory, "../ThirdParty/MotionAdaptorLib", "lib");
-        PublicAdditionalLibraries.Add(Path.Combine(lib_folder_path, "MotionAdaptorLib.lib"));
+        string dll_folder_path = Path.Combine(ModuleDirectory, "../ThirdParty/MotionAdaptorLib", "bin");
+        PublicAdditionalLibraries.Add(Path.Combine(dll_folder_path, "MotionAdaptorLib.lib"));
 
         // Delay-load the DLL, so we can load it from the right place first
         PublicDelayLoadDLLs.Add("MotionAdaptorLib.dll");
 
         // Runtime Dependencies for Project Package
-        string dll_folder_path = Path.Combine(ModuleDirectory, "../ThirdParty/MotionAdaptorLib", "bin");
         RuntimeDependencies.Add(Path.Combine(dll_folder_path, "MotionAdaptorLib.dll"));
         RuntimeDependencies.Add(Path.Combine(dll_folder_path, "GoCreateEngine.dll"));
         RuntimeDependencies.Add(Path.Combine(dll_folder_path, "SDL2.dll"));

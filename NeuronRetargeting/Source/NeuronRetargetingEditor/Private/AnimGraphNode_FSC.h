@@ -37,6 +37,8 @@ public:
 
     virtual void PreloadRequiredAssets() override;
 
+	virtual void CustomizeDetails(IDetailLayoutBuilder& DetailBuilder) override;
+	static FReply ResetButtonClicked(IDetailLayoutBuilder* DetailLayoutBuilder);
 protected:
 	// UAnimGraphNode_SkeletalControlBase interface
 	virtual FText GetControllerDescription() const override;
@@ -44,4 +46,9 @@ protected:
 private:
 	/** Constructing FText strings can be costly, so we cache the node's title */
 	FNodeTitleTextTable CachedNodeTitles;
+	
+	UPROPERTY()
+	bool BoneInitializeed = false;
+
+	void ReloadBoneNames(const FReferenceSkeleton& Skel, bool force);
 };

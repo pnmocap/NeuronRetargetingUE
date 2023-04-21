@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0.00",
+	"VersionName": "1.0.02",
 	"FriendlyName": "NeuronRetargeting",
 	"Description": "Retargeting Module for Noitom Motion Captures",
 	"Category": "Animation",
