@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"NeuronRetargeting": "UnrealEditor-NeuronRetargeting.dll",
+		"NeuronRetargetingEditor": "UnrealEditor-NeuronRetargetingEditor.dll"
+	}
+}

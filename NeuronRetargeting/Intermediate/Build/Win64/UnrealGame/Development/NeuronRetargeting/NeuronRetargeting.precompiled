@@ -1,0 +1,7 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Development\\NeuronRetargeting\\Module.NeuronRetargeting.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\NeuronRetargeting\\AnimNode_FSC.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\NeuronRetargeting\\NeuronRetargeting.cpp.obj"
+	]
+}
